@@ -106,6 +106,7 @@ Note that for these, you should start by defining what's the variable workload (
 1. Matching socks into pairs
 1. Opening a book to a specific page
 1. Finding a specific card in a shuffled deck of cards
+1. Finding a specific card in a sorted deck of cards (provided that you have a good definition of "sorted")
 
 ### twoSum
 This is a classic problem that tests your ability to itentify the time complexity of algorithms, and decide which implementation is better based on your assessment.
