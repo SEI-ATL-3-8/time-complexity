@@ -111,7 +111,6 @@ Note that for these, you should start by defining what's the variable workload (
 ### twoSum
 This is a classic problem that tests your ability to itentify the time complexity of algorithms, and decide which implementation is better based on your assessment.
 
-
 Given an unsorted array of integers and a target, find the two integers in the array that sum up to the target, and return the indicies of those integers in the array. There will be exactly 1 combination that gives the correct sum, and you cannot use the same element twice. (So for example, twoSum([1,2,5], 10) -> [2, 2] is not valid.)
 
 Sample 1: twoSum([11, 2, 7, 15], 9) -> [1, 2]
@@ -119,18 +118,18 @@ Sample 1: twoSum([11, 2, 7, 15], 9) -> [1, 2]
 ### Time complexities of some common operations
 It's important to know the time complexities of the following:
 - For Arrays:
-1. Accessing an element (at an arbitrary position)
-1. Inserting an element (at an arbitrary position)
-1. Finding a given element (unsorted)
-1. Finding a given element (sorted)
+1. Accessing an element (at an arbitrary position): constant O(1)
+1. Inserting an element (at an arbitrary position): linear O(n)
+1. Finding a given element (unsorted): linear O(n)
+1. Finding a given element (sorted): logarithmic O(log(n))
 
 - For objects:
-1. Accessing an element (at an arbitrary key)
-1. Inserting an element (at an arbitrary key)
+1. Accessing an element (at an arbitrary key): constant O(1)
+1. Inserting an element (at an arbitrary key): linear O(n)
 
 - For linked lists:
-1. Accessing an element (at an arbitrary position)
-1. Inserting an element (at an arbitrary position)
+1. Accessing an element (at an arbitrary position): linear O(n)
+1. Inserting an element (at an arbitrary position): O(1)
 1. Finding a given element (unsorted)
 1. Finding a given element (sorted)
 
