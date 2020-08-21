@@ -100,7 +100,8 @@ Special note: there are (many terrifying) categories that are worse than quadrat
 ### Identifying the time complexities of some common operations
 Note that for these, you should start by defining what's the variable workload (ie what does n represent) in each situation.
 
-1. Watering the plants in a garden
+1. Watering the plants in a garden (by hand, with a can)
+1. Watering the plants in a garden (with a dripline irrigation system) (<cite contributor="Matt">- Megs</cite>)
 1. Folding a piece of paper in half repeatedly
 1. Matching socks into pairs
 1. Opening a book to a specific page
