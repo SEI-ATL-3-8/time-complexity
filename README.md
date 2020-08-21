@@ -45,7 +45,7 @@ ____________
 For long multiplication, the second problem (which has double the input size) will _not_ take double the time. It will take more! (We will figure out exactly how much more soon) But for now, our first big revelation is that not all processes have the property that double the work == double the time. And this is the core question of figuring out time complexity: if we double (or triple, or etc) the work, how does it affect the time it takes to do it.
 
 ### Constant time
-For some tasks, the amount of work does not impact the time it takes to finish at all. We call this a _constant time complexity_. It's notated as O(1). The fact that there's no variable in the parentheses means that even when the workload varies, the time does not.
+For some tasks, the amount of work does not impact the time it takes to finish at all. We call this a _constant time complexity_. It's notated as O(1). The fact that there's no variable in the parentheses means that even when the workload varies, the time does not.</br>
 ![constant time](./assets/constant_time.jpg)
 
 An example of a constant-time operation is accessing an element in an array.
@@ -92,12 +92,56 @@ This is called _logarithmic time complexity_, and repeatedly doubling (or tripli
 
 This is notated O(log(n)). Based on the graph, how do you think logarithmic time compares against quadratic, linear, and constant?
 
-### Intersection of two arrays
+### The real takeaway
+In general, all this analysis usually results in a simple "yes" or "no" answer to the question of, Is a given algorithm too slow to be useful? And the answer is simple: linear and below is ok, quadratic and above is not ok.
 
-### twoSum
+Special note: there are (many terrifying) categories that are worse than quadratic. There are no categories that are better than constant. There is one important category that we haven't talked about yet, because there is no great real-world analog that I know for it. It is O(n\*log(n)), and it happens to be the time complexity of a sorting algorithm called [quicksort](https://en.wikipedia.org/wiki/Quicksort), which is the most widely used sorting algorithm. Even though O(n\*log(n)) is hard to get a feel for, we can graph it and see that it's pretty palatable.
 
 ### Identifying the time complexities of some common operations
+Note that for these, you should start by defining what's the variable workload (ie what does n represent) in each situation.
 
-### More exotic complexities
+1. Watering the plants in a garden
+1. Folding a piece of paper in half repeatedly
+1. Matching socks into pairs
+1. Opening a book to a specific page
+1. Finding a specific card in a shuffled deck of cards
 
-### Applying time complexities in real life
+### twoSum
+This is a classic problem that tests your ability to itentify the time complexity of algorithms, and decide which implementation is better based on your assessment.
+
+
+Given an unsorted array of integers and a target, find the two integers in the array that sum up to the target, and return the indicies of those integers in the array. There will be exactly 1 combination that gives the correct sum, and you cannot use the same element twice. (So for example, twoSum([1,2,5], 10) -> [2, 2] is not valid.)
+
+Sample 1: twoSum([11, 2, 7, 15], 9) -> [1, 2]
+
+### Time complexities of some common operations
+It's important to know the time complexities of the following:
+- For Arrays:
+1. Accessing an element (at an arbitrary position)
+1. Inserting an element (at an arbitrary position)
+1. Finding a given element (unsorted)
+1. Finding a given element (sorted)
+
+- For objects:
+1. Accessing an element (at an arbitrary key)
+1. Inserting an element (at an arbitrary key)
+
+- For linked lists:
+1. Accessing an element (at an arbitrary position)
+1. Inserting an element (at an arbitrary position)
+1. Finding a given element (unsorted)
+1. Finding a given element (sorted)
+
+### Intersection of two arrays
+Another classic!
+
+Given two arrays of integers, return an array that contains just the elements that are present in both input arrays. The input arrays are not guaranteed to be sorted, but any given element will only appear once in a given input array.
+
+Sample 1: intersection([0, 1, 4, 5, 8], [0, 2, 7, 9, 4]) -> [0, 4]
+
+### The terrifying categories that are worse than quadratic and definitely not acceptable
+In increasing level of bad-ness:
+
+1. Any exponent higher than 2 on n: O(n^3), O(n^4), etc. These happen when you have 3-level (or 4-level, etc) nested loops.
+1. Exponential: O(2^n), although 2 can be replaced with any number here without changing the meaning. One well-known example of this is the recursive solution to fibonacciSequence.
+1. Factorial: O(n!). A well-known example is the brute-force solution to the travelling salesman problem, or the knapsack problem.
