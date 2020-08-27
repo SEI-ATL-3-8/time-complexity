@@ -125,7 +125,7 @@ It's important to know the time complexities of the following:
 
 - For objects:
 1. Accessing an element (at an arbitrary key): constant O(1)
-1. Inserting an element (at an arbitrary key): linear O(n)
+1. Inserting an element (at an arbitrary key): constant O(1)
 
 - For linked lists:
 1. Accessing an element (at an arbitrary position): linear O(n)
