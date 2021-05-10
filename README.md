@@ -101,40 +101,26 @@ Special note: there are (many terrifying) categories that are worse than quadrat
 Note that for these, you should start by defining what's the variable workload (ie what does n represent) in each situation.
 
 1. Watering the plants in a garden (by hand, with a can)
-1. Watering the plants in a garden (with a dripline irrigation system) (<cite contributor="Matt">- Megs</cite>)
-1. Folding a piece of paper in half repeatedly
-1. Matching socks into pairs
+1. Watering the plants in a garden (with a dripline irrigation system)
+1. Folding a piece of paper in half repeatedly until it can fit in your wallet
+1. Matching socks into pairs after taking them out of the dryer
 1. Opening a book to a specific page
 1. Finding a specific card in a shuffled deck of cards
-1. Finding a specific card in a sorted deck of cards (provided that you have a good definition of "sorted")
-
-### twoSum
-This is a classic problem that tests your ability to itentify the time complexity of algorithms, and decide which implementation is better based on your assessment.
-
-Given an unsorted array of integers and a target, find the two integers in the array that sum up to the target, and return the indicies of those integers in the array. There will be exactly 1 combination that gives the correct sum, and you cannot use the same element twice. (So for example, twoSum([1,2,5], 10) -> [2, 2] is not valid.)
-
-Sample 1: twoSum([11, 2, 7, 15], 9) -> [1, 2]
 
 ### Time complexities of some common operations
 It's important to know the time complexities of the following:
 - For Arrays:
-1. Accessing an element (at an arbitrary position): constant O(1)
-1. Inserting an element (at an arbitrary position): linear O(n)
-1. Finding a given element (unsorted): linear O(n)
-1. Finding a given element (sorted): logarithmic O(log(n))
-
-- For objects:
-1. Accessing an element (at an arbitrary key): constant O(1)
-1. Inserting an element (at an arbitrary key): constant O(1)
-
-- For linked lists:
-1. Accessing an element (at an arbitrary position): linear O(n)
-1. Inserting an element (at an arbitrary position): O(1)
+1. Accessing an element (at an arbitrary position)
+1. Inserting an element (at an arbitrary position)
 1. Finding a given element (unsorted)
 1. Finding a given element (sorted)
 
+- For objects:
+1. Accessing an element (at an arbitrary key)
+1. Inserting an element (at an arbitrary key)
+
 ### Intersection of two arrays
-Another classic!
+This is a classic problem that tests your ability to itentify the time complexity of algorithms, and decide which implementation is better based on your assessment.
 
 Given two arrays of integers, return an array that contains just the elements that are present in both input arrays. The input arrays are not guaranteed to be sorted, but any given element will only appear once in a given input array.
 
